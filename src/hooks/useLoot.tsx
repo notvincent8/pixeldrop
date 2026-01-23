@@ -4,7 +4,7 @@ import type { LootPool } from "@/assets/pools.ts"
 import { randomInt } from "@/lib/random.ts"
 
 export const POOL_BASE_WEIGHT = 10000
-export const MAX_ROLL_COUNT = 16
+export const MAX_ROLL_COUNT = 4
 
 const useLoot = (pool: LootPool) => {
   const totalRollsRef = useRef(0)
