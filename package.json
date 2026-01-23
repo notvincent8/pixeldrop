@@ -1,0 +1,50 @@
+{
+  "name": "atelier-boilerplate",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "add:three": "pnpm add three @react-three/fiber @react-three/drei && pnpm add -D @types/three",
+    "add:three:effects": "pnpm add @react-three/postprocessing",
+    "add:three:physics": "pnpm add @react-three/rapier",
+    "add:lenis": "pnpm add lenis",
+    "add:radix": "echo 'Usage: pnpm add @radix-ui/react-[component]' && echo 'Examples: dialog, dropdown-menu, tooltip, tabs, accordion'",
+    "add:zustand": "pnpm add zustand",
+    "add:leva": "pnpm add leva",
+    "add:perf": "pnpm add @vercel/speed-insights"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "clsx": "^2.1.1",
+    "gsap": "^3.14.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.11",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react-swc": "^4.2.2",
+    "globals": "^16.5.0",
+    "typescript": "~5.9.3",
+    "vite": "npm:rolldown-vite@7.2.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@7.2.5"
+    },
+    "onlyBuiltDependencies": [
+      "@swc/core"
+    ]
+  }
+}
